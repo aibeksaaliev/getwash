@@ -1,0 +1,89 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.add-block {
+    background: rgba($color: $blue, $alpha: 0.85);
+    text-align: center;
+    padding: 41px 0 43px;
+    @include md {
+        background: none;
+        text-align: left;
+        padding: 0 15px;
+    }
+    .add-block-container {
+        @include md {
+            background-color: rgba($color: $blue, $alpha: 0.85);
+            border-radius: 20px;
+            padding: 52px 0 0 70px;
+            max-width: 1170px;
+            display: flex;
+        }
+    }
+    .add-text {
+        display: inline-block;
+        color: $gray-2;
+        font-weight: 300;
+        font-size: 21px;
+        line-height: 115%;
+        margin-bottom: 23px;
+        @include lg {
+            font-size: 36px;
+            line-height: 115%;
+            margin-bottom: 10px;
+        }
+    }
+    .add-descrip {
+        display: inline-block;
+        color: $gray;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        margin-bottom: 32px;
+        @include lg {
+            display: block;
+            font-size: 18px;
+            line-height: 140%;
+            margin-bottom: 41px;
+        }
+    }
+    .download-link {
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 166px;
+        height: 54px;
+        border-radius: 8px;
+        text-indent: 170px;
+        white-space: nowrap;
+        overflow: hidden;
+        @include md {
+            margin-right: 10px;
+        }
+    }
+    .app-store {
+        background: url(../images/ic-app-store.png) no-repeat center;
+    }
+    .google-play {
+        background: url(../images/ic-google-play.png) no-repeat center;
+    }
+}
+
+.add-info {
+    flex-basis: 40%;
+}
+
+.add-pic {
+    display: none;
+    @include md {
+        display: block;
+        margin-top: -61px;
+        margin-left: 77px;
+    }
+    @include lg {
+        margin-top: -120px;
+        margin-left: 77px;
+    }
+}
+
+.add-pic img {
+    display: block;
+}

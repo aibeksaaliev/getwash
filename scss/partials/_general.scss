@@ -1,0 +1,31 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 140%;
+    color: $base-text;
+    min-width: 300px;
+    background: $white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+a, button {
+    color: inherit;
+    font-size: inherit;
+}

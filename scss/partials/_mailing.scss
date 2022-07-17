@@ -1,0 +1,78 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.mailing {
+    background: url(../images/mailing-bg-mobile.png) no-repeat center / cover, $blue;
+    color: $white;
+    padding: 28px 0 67px;
+    margin-bottom: 82px;
+    @include md {
+        background: url(../images/mailing-bd-desktop.png) no-repeat center bottom, $blue;
+        padding: 62px 0 61px;
+    }
+    @include lg {
+        margin-bottom: 204px;
+    }
+    .mailing-container {
+        @include md {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .mailing-title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 0 39px;
+        @include md {
+            margin: 0;
+            font-size: 32px;
+            line-height: 39px;
+        }
+    }
+    .label-title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .field {
+        width: 100%;
+        padding: 15px 20px 13px;
+        border: 1px solid $gray-3;
+        outline: none;
+        margin-bottom: 19px;
+        @include md {
+            width: 283px;
+            height: 45px;
+            margin: 0;
+        }
+    }
+    .field ::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #aaa;
+    }
+    .btn_mailing {
+        background: $white;
+        width: 100%;
+        padding: 14px 10px;
+        @include sm {
+            width: 170px;
+            height: 50px;
+            margin-top: 25px;
+        }
+        @include md {
+            margin: 0 0 0 36px;
+        }
+    }
+}
+
+.mailing-form {
+    @include sm {
+        display: flex;
+        justify-content: space-between;
+    }
+}

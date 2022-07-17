@@ -1,0 +1,96 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.start {
+    padding-top: 49px;
+    @include md {
+        background: url(../images/start-bg-desktop.png) no-repeat -7% center;
+        padding-top: 37px;
+    }
+    .start-info {
+        text-align: center;
+        @include md {
+            text-align: left;
+            margin-left: 49%;
+        }
+        &_title {
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 110%;
+            color: $dark-blue;
+            margin: 0;
+            @include md {
+                font-size: 36px;
+                line-height: 110%;
+            }
+        }
+    }
+    .start-row {
+        margin-top: 56px;
+    }
+    .start-box {
+        margin-top: 30px;
+        @include md {
+            padding-left: 93px;
+            margin-top: 35px;
+        }
+        &_title {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 135%;
+            color: $dark-blue;
+            margin: 0 0 12px;
+            padding-top: 80px;
+            position: relative;
+            @include md {
+                font-size: 24px;
+                line-height: 135%;
+                padding-top: 0;
+                margin-bottom: 7px;
+            }
+        }
+        &_text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 135%;
+            margin: 0;
+            @include md {
+                font-size: 18px;
+                line-height: 135%;
+                width: 80%;
+            }
+        }
+    }
+    .start-img {
+        margin-top: -10px;
+        background: url(../images/start-bg.png) no-repeat center / cover;
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        @include md {
+            display: none;
+        }
+    }
+}
+
+@each $icon in download, location, filter, wallet {
+    .ic-#{$icon} {
+        &::before {
+            content: "";
+            width: 60px;
+            height: 60px;
+            border-radius: 6px;
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translate(50%);
+            border-radius: 7px;
+            background: $gray-2 url(../images/ic-#{$icon}.svg) no-repeat center;
+            @include md {
+                top: 1px;
+                left: -120px;
+            }
+        }
+    }
+}

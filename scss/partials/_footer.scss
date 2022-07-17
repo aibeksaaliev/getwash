@@ -1,0 +1,21 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.footer {
+    background: $dark-blue;
+    text-align: center;
+    padding: 38px 0 43px;
+    @include md {
+        text-align: right;
+        padding-bottom: 40px;
+    }
+    span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: $white;
+        @include md {
+            padding-right: 40px;
+        }
+    }
+}
